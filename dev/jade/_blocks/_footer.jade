@@ -1,0 +1,20 @@
+// footer block start
+footer.footer
+    .container
+        .footer__top
+            address.address
+                h2.title__address
+                p @:
+                    a.mail(href='mailto:hi@wapik.com') hi@wapik.com
+                p p:
+                    a.phone(href='tel:+62 202 555 0117') +62 202 555 0117
+                p.adds a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+            nav.footer__nav
+                - var names = ["Home","About Us","PRICING","Contact Us"]
+                ul.footer__nav__list
+                    each val in names
+                        li.footer__nav__item= val
+        .footer__down
+            .copyright All rights reserved. 2015. no copy alowed
+            .social
+//footer block end

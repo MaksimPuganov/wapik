@@ -1,0 +1,40 @@
+doctype html
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+html(lang="ru-RU")
+    head
+        meta(http-equiv = 'Content-Type', content = 'text/html; charset=utf-8')
+        meta(http-equiv='X-UA-Compatible', content="IE=edge,chrome=1")
+        title
+            block title
+        meta(name='viewport' content='width=device-width')
+        link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&subset=latin,cyrillic' media='screen, projection, print')
+        link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:100,400,,500,700&subset=latin,cyrillic-ext,cyrillic')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
+        link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
+body
+    <!--[if lt IE 8]>
+    <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http://browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p>
+    <![endif]-->
+    .wrapper
+        .maincontent
+            .container
+                include _blocks/_headblock
+                include _blocks/_features
+                include _blocks/_promotemp
+                include _blocks/_reviews
+                include _blocks/_promomap
+                include _blocks/_pricing
+                include _blocks/_download
+                //- include _blocks/_nav
+                block content
+        include _blocks/_footer
+    //- script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    //- script(src="js/main.js")
+
+    <!--    window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');
+    <!-- script(src='/js/_vendors/jquery-ui.min.js') -->
+    <!--script(src='js/plugins.min.js') -->
+    <!-- script(src='js/main.min.js') -->

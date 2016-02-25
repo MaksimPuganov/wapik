@@ -1,0 +1,33 @@
+// features block start
+.features__block
+    .article__block
+        h2.title__block Best of out features
+        p.descr__block 
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+    .card__block
+        - var titles = ['Ionicons', 'Creative Design', 'Photoshop and Sketch']
+        - var descs = ['Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem.', 'Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna.']
+        - for( var i = 0; i < titles.length; i++ )
+            - var val = titles[i]
+            - var desc = descs[i]
+                .card__item__v
+                    .icon
+                        img(src="http://dummyimage.com/52/555/fff.png&text=icon", alt="icon")
+                    h2.title__block= val
+                    p.descr= desc    
+    .divider__block
+        .divider__vertical
+        .divider__gorizont
+    .capability__block
+        .card__block_g
+            - var titles = ['Cross Browser Compatibility', 'Creative Idea', 'Pixel Perfect', 'Free Forever and Ever']
+            - var descs = ['Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.', 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.']
+            - for( var i = 0; i < titles.length; i++ )
+                - var val = titles[i]
+                - var desc = descs[i]
+                    .card__item__g
+                        .icon
+                            img(src="http://dummyimage.com/30/555/fff.png&text=icon", alt="icon")
+                        h2.title__block= val
+                        p.descr= desc
+// features block end
