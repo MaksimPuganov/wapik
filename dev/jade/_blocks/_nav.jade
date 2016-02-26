@@ -1,7 +1,8 @@
 //- navbar block start
 nav.nav__head
-    - var names = ["Home","About Us","PRICING","Contact Us"]
+    - var names = ["Home","About Us","Pricing","Contact Us"]
     ul.nav__head__list
         each val in names
             li.nav__head__item= val
+    a.start__button(href="!#") Get Started
 //- navbar block end

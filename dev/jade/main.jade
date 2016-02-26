@@ -13,6 +13,7 @@ html(lang="ru-RU")
         link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&subset=latin,cyrillic' media='screen, projection, print')
         link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:100,400,,500,700&subset=latin,cyrillic-ext,cyrillic')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
+        link(rel='stylesheet' type='text/css' href='font/proxima/proxima.css' media='screen, projection, print')
         link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
 body
     <!--[if lt IE 8]>
@@ -20,8 +21,8 @@ body
     <![endif]-->
     .wrapper
         .maincontent
+            include _blocks/_headblock
             .container
-                include _blocks/_headblock
                 include _blocks/_features
                 include _blocks/_promotemp
                 include _blocks/_reviews
@@ -31,7 +32,7 @@ body
                 //- include _blocks/_nav
                 block content
         include _blocks/_footer
-    //- script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    //- script(src='https://code.jquery.com/jquery-2.2.1.min.js')
     //- script(src="js/main.js")
 
     <!--    window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');

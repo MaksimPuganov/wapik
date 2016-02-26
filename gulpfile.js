@@ -9,7 +9,9 @@ var
 	uncss 		= require('gulp-uncss'),
 	nano		= require('gulp-cssnano'),
 	sourcemaps  = require('gulp-sourcemaps'),
-	uglify 		= require('gulp-uglifyjs');
+	uglify 		= require('gulp-uglifyjs'),
+	imagemin 	= require('gulp-imagemin'),
+	pngquant 	= require('imagemin-pngquant');
 
 /* --------- paths --------- */
 
@@ -40,9 +42,14 @@ var
 			destonation : 'dist/font'
 		},
 
+		img : {
+			location : 'dev/images/**/*.{png,jpg}',
+			dest	 : 'dist/img'
+		},
+
 		browserSync : {
 			baseDir : './dist/',
-			watchPaths : ['./dist/*.html', './dist/css/*.css', './dist/js/*.js']
+			watchPaths : ['./dist/*.html', './dist/css/*.css', './dist/js/*.js', 'dist/img/**/*.{png,jpg}']
 		}
 	};
 
@@ -88,6 +95,18 @@ gulp.task('fonts', function () {
 		.pipe(gulp.dest(paths.fonts.destonation));
 });
 
+/* --------- images --------- */
+
+gulp.task('images', function () {
+	gulp.src(paths.img.location)
+		.pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant({quality: '75-80', speed: 4})]
+		}))
+		.pipe(gulp.dest(paths.img.dest));
+});
+
 /* --------- browser sync --------- */
 
 gulp.task('sync', function() {
@@ -105,9 +124,10 @@ gulp.task('watch', function(){
 	gulp.watch(paths.scss.location, ['sass']);
 	gulp.watch(paths.js.location, ['js']);
 	gulp.watch(paths.fonts.location, ['fonts']);
+	gulp.watch(paths.img.location, ['images']);
 	gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
 });
 
 /* --------- default --------- */
 
-gulp.task('default', ['jade', 'sass', 'js', 'fonts', 'sync', 'watch']);
+gulp.task('default', ['jade', 'sass', 'js', 'fonts', 'images', 'sync', 'watch']);

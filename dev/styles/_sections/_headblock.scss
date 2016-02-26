@@ -1,0 +1,62 @@
+//head block
+.head__block {
+    background: url('../img/head.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 660px;
+    color: #fff;
+
+    .color__block {
+        @include opacity(0.9);
+        background-color: rgb(45, 110, 112);
+        height: 100%;
+    }
+
+    .gradient__block {
+        height: 200px;
+        @include background-image(linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.25) 100%));
+    }
+
+    .header {
+        height: 84px;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        margin-left: 222px;
+        margin-right: 222px;
+    }
+
+    .logo__block {
+        width: 50%;
+        padding-top: 32px;
+
+        .logo {
+            font-style: 'proxima_nova' sans-serif;
+            font-size: 29px;
+            font-weight: 700;
+            line-height: 29px;
+            text-transform: uppercase;
+            padding-right: 25px;
+            border-right: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        .phone {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 28px;
+            text-transform: uppercase;
+            float: left;
+            padding-left: 32px;
+            position: relative;
+
+            &:before {
+                content: "";
+                background: url('../img/icons/icon-phone.png') no-repeat;
+                position: absolute;
+                top: 8px;
+                left: 15px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}

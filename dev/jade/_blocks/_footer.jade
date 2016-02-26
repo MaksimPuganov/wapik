@@ -10,11 +10,33 @@ footer.footer
                     a.phone(href='tel:+62 202 555 0117') +62 202 555 0117
                 p.adds a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
             nav.footer__nav
-                - var names = ["Home","About Us","PRICING","Contact Us"]
+                h3.title__menu Company
+                - var names = ["Home","About Us","Pricing","Contact Us"]
                 ul.footer__nav__list
                     each val in names
-                        li.footer__nav__item= val
+                        li.footer__nav__item
+                            a.nav__link(href="#!")= val
+            nav.footer__nav
+                h3.title__menu Others
+                - var names = ["Help & Support","Privacy Policy","Terms","Sitemap"]
+                ul.footer__nav__list
+                    each val in names
+                        li.footer__nav__item
+                            a.nav__link(href="#!")= val
+            .subscribe__block
+                h3.title__menu
+                    | Newsletter
+                p.desc
+                    | Subscribe to our newsletter and get all the cool news
+                .input__mail
+                    input(type="email" placeholder="Enter Email")
         .footer__down
-            .copyright All rights reserved. 2015. no copy alowed
-            .social
+            .copyright.left All rights reserved. 2015. no copy alowed
+            - var socials = ['tw','fb','inst','drb','git']
+            ul.socials.right
+                each icon in socials
+                    li(class="socials__item socials__item_" + icon)
+                        a(href="#").socials__link= icon
+                            .socials__icon
+                
 //footer block end
