@@ -2,23 +2,18 @@
 .nav__head {
     margin-top: 34px;
     float: left;
-    width: 50%;
+    width: 48%;
 
     .nav__head__list {
         float: left;
-        width: 75%;
+        width: 77%;
         .nav__head__item{
             display: inline-block;
             margin-left: 30px;
 
             .nav__head__link {
-                text-decoration: none;
-                text-transform: uppercase;
-                font-family: Montserrat;
-                color: white;
                 font-size: 13px;
-                font-weight: 400;
-                line-height: 18px;
+                line-height: 28px;
             }
         }
     }
@@ -26,13 +21,7 @@
 .start__button {
     display: block;
     float: right;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-family: Montserrat;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: 12px;
     padding: 5px 10px;
     background-color: rgba(255, 255, 255, .35);
     @include border-radius(2px);

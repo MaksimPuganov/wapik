@@ -1,0 +1,131 @@
+// @import "../_misc/sprite";
+.features__block {
+    width: 100%;
+    float: left;
+    margin-bottom: 120px;
+}
+
+.article__block {
+    text-align: center;
+    width: 445px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.card__block {
+    width: 100%;
+    float: left;
+    .card__item_v {
+        width: calc(100%/3);
+        float: left;
+        text-align: center;
+        margin-bottom: 60px;
+
+        .icon {
+            margin: 0 auto;
+        }
+        .icon_atom {
+            @include sprite($icon-atom);
+            padding-bottom: 4px;
+        }
+
+        .icon_flask {
+            @include sprite($icon-flask);
+        }
+
+        .icon_layers {
+            @include sprite($icon-layers);
+            padding-bottom: 8px;
+        }
+    }
+
+    .title__item {
+        color: #0f5f5c;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .descr {
+        padding: 0 12px;
+    }
+}
+
+.divider__block {
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+
+    .divider__vertical {
+        width: 2px;
+        height: 90px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+    }
+
+    .divider__gorizont {
+        width: 90px;
+        height: 2px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+    }
+}
+
+.capability__block {
+    width: 100%;
+
+    .card__item__g {
+        width: 50%;
+        float: left;
+        margin-bottom: 60px;
+
+        .title__item {
+            float: left;
+            color: #0f5f5c;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            position: relative;
+            margin-left: 55px;
+
+            }
+        .icon_planet {
+
+            &:before{
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -50px;
+                @include sprite($icon-planet);
+            }
+        }
+
+        .icon_lightbulb {
+
+            &:before{
+                content: " ";
+                display: block;
+                position: absolute;
+                top: -5px;
+                left: -50px;
+                @include sprite($icon-lightbulb);
+            }
+        }
+    }
+
+
+
+    .icon_magic-wand {
+        @include sprite($icon-magic-wand);
+    }
+
+    .icon_cloud {
+        @include sprite($icon-cloud);
+    }
+
+
+    .descr {
+        float: left;
+    }
+}

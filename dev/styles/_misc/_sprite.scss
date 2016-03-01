@@ -1,0 +1,166 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$icon-atom-name: 'icon-atom';
+$icon-atom-x: 546px;
+$icon-atom-y: 0px;
+$icon-atom-offset-x: -546px;
+$icon-atom-offset-y: 0px;
+$icon-atom-width: 52px;
+$icon-atom-height: 52px;
+$icon-atom-total-width: 714px;
+$icon-atom-total-height: 56px;
+$icon-atom-image: '../img/icons/sprite.png';
+$icon-atom: (546px, 0px, -546px, 0px, 52px, 52px, 714px, 56px, '../img/icons/sprite.png', 'icon-atom', );
+$icon-cloud-name: 'icon-cloud';
+$icon-cloud-x: 340px;
+$icon-cloud-y: 0px;
+$icon-cloud-offset-x: -340px;
+$icon-cloud-offset-y: 0px;
+$icon-cloud-width: 38px;
+$icon-cloud-height: 36px;
+$icon-cloud-total-width: 714px;
+$icon-cloud-total-height: 56px;
+$icon-cloud-image: '../img/icons/sprite.png';
+$icon-cloud: (340px, 0px, -340px, 0px, 38px, 36px, 714px, 56px, '../img/icons/sprite.png', 'icon-cloud', );
+$icon-flask-name: 'icon-flask';
+$icon-flask-x: 438px;
+$icon-flask-y: 0px;
+$icon-flask-offset-x: -438px;
+$icon-flask-offset-y: 0px;
+$icon-flask-width: 48px;
+$icon-flask-height: 56px;
+$icon-flask-total-width: 714px;
+$icon-flask-total-height: 56px;
+$icon-flask-image: '../img/icons/sprite.png';
+$icon-flask: (438px, 0px, -438px, 0px, 48px, 56px, 714px, 56px, '../img/icons/sprite.png', 'icon-flask', );
+$icon-layers-name: 'icon-layers';
+$icon-layers-x: 658px;
+$icon-layers-y: 0px;
+$icon-layers-offset-x: -658px;
+$icon-layers-offset-y: 0px;
+$icon-layers-width: 56px;
+$icon-layers-height: 48px;
+$icon-layers-total-width: 714px;
+$icon-layers-total-height: 56px;
+$icon-layers-image: '../img/icons/sprite.png';
+$icon-layers: (658px, 0px, -658px, 0px, 56px, 48px, 714px, 56px, '../img/icons/sprite.png', 'icon-layers', );
+$icon-lightbulb-name: 'icon-lightbulb';
+$icon-lightbulb-x: 74px;
+$icon-lightbulb-y: 0px;
+$icon-lightbulb-offset-x: -74px;
+$icon-lightbulb-offset-y: 0px;
+$icon-lightbulb-width: 24px;
+$icon-lightbulb-height: 38px;
+$icon-lightbulb-total-width: 714px;
+$icon-lightbulb-total-height: 56px;
+$icon-lightbulb-image: '../img/icons/sprite.png';
+$icon-lightbulb: (74px, 0px, -74px, 0px, 24px, 38px, 714px, 56px, '../img/icons/sprite.png', 'icon-lightbulb', );
+$icon-magic-wand-name: 'icon-magic-wand';
+$icon-magic-wand-x: 248px;
+$icon-magic-wand-y: 0px;
+$icon-magic-wand-offset-x: -248px;
+$icon-magic-wand-offset-y: 0px;
+$icon-magic-wand-width: 32px;
+$icon-magic-wand-height: 32px;
+$icon-magic-wand-total-width: 714px;
+$icon-magic-wand-total-height: 56px;
+$icon-magic-wand-image: '../img/icons/sprite.png';
+$icon-magic-wand: (248px, 0px, -248px, 0px, 32px, 32px, 714px, 56px, '../img/icons/sprite.png', 'icon-magic-wand', );
+$icon-phone-name: 'icon-phone';
+$icon-phone-x: 0px;
+$icon-phone-y: 0px;
+$icon-phone-offset-x: 0px;
+$icon-phone-offset-y: 0px;
+$icon-phone-width: 14px;
+$icon-phone-height: 14px;
+$icon-phone-total-width: 714px;
+$icon-phone-total-height: 56px;
+$icon-phone-image: '../img/icons/sprite.png';
+$icon-phone: (0px, 0px, 0px, 0px, 14px, 14px, 714px, 56px, '../img/icons/sprite.png', 'icon-phone', );
+$icon-planet-name: 'icon-planet';
+$icon-planet-x: 158px;
+$icon-planet-y: 0px;
+$icon-planet-offset-x: -158px;
+$icon-planet-offset-y: 0px;
+$icon-planet-width: 30px;
+$icon-planet-height: 30px;
+$icon-planet-total-width: 714px;
+$icon-planet-total-height: 56px;
+$icon-planet-image: '../img/icons/sprite.png';
+$icon-planet: (158px, 0px, -158px, 0px, 30px, 30px, 714px, 56px, '../img/icons/sprite.png', 'icon-planet', );
+$spritesheet-width: 714px;
+$spritesheet-height: 56px;
+$spritesheet-image: '../img/icons/sprite.png';
+$spritesheet-sprites: ($icon-atom, $icon-cloud, $icon-flask, $icon-layers, $icon-lightbulb, $icon-magic-wand, $icon-phone, $icon-planet, );
+$spritesheet: (714px, 56px, '../img/icons/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

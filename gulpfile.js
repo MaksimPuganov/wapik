@@ -11,7 +11,8 @@ var
 	sourcemaps  = require('gulp-sourcemaps'),
 	uglify 		= require('gulp-uglifyjs'),
 	imagemin 	= require('gulp-imagemin'),
-	pngquant 	= require('imagemin-pngquant');
+	pngquant 	= require('imagemin-pngquant'),
+	spritesmith = require('gulp.spritesmith');
 
 /* --------- paths --------- */
 
@@ -42,14 +43,24 @@ var
 			destonation : 'dist/font'
 		},
 
+		sprt : {
+			location 	: './dev/images/icons/*.png',
+			destCSS	 	: './dev/styles/_misc/',
+			destSprite  : './dist/img/icons/',
+			nameCSS		: '_sprite.scss',
+			nameSprite	: 'sprite.png',
+			destPath	: '../img/icons/'
+
+		},
+
 		img : {
-			location : 'dev/images/**/*.{png,jpg}',
+			location : 'dev/images/*.{png,jpg}',
 			dest	 : 'dist/img'
 		},
 
 		browserSync : {
 			baseDir : './dist/',
-			watchPaths : ['./dist/*.html', './dist/css/*.css', './dist/js/*.js', 'dist/img/**/*.{png,jpg}']
+			watchPaths : ['./dist/*.html', './dist/css/*.css', './dist/js/*.js', 'dist/images/**/*.{png,jpg}']
 		}
 	};
 
@@ -95,15 +106,29 @@ gulp.task('fonts', function () {
 		.pipe(gulp.dest(paths.fonts.destonation));
 });
 
+/* --------- sprites --------- */
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src(paths.sprt.location).pipe(spritesmith({
+    imgName: paths.sprt.nameSprite,
+    cssName: paths.sprt.nameCSS,
+	padding: 60,
+	algorithm: 'left-right',
+	imgPath: paths.sprt.destPath+paths.sprt.nameSprite
+  }));
+  spriteData.img.pipe(gulp.dest(paths.sprt.destSprite));
+  spriteData.css.pipe(gulp.dest(paths.sprt.destCSS));
+});
+
 /* --------- images --------- */
 
 gulp.task('images', function () {
 	gulp.src(paths.img.location)
-		.pipe(imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant({quality: '75-80', speed: 4})]
-		}))
+		// .pipe(imagemin({
+		// 	progressive: true,
+		// 	svgoPlugins: [{removeViewBox: false}],
+		// 	use: [pngquant({quality: '75-80', speed: 4})]
+		// }))
 		.pipe(gulp.dest(paths.img.dest));
 });
 
@@ -124,10 +149,11 @@ gulp.task('watch', function(){
 	gulp.watch(paths.scss.location, ['sass']);
 	gulp.watch(paths.js.location, ['js']);
 	gulp.watch(paths.fonts.location, ['fonts']);
+	gulp.watch(paths.sprt.location, ['sprite']);
 	gulp.watch(paths.img.location, ['images']);
 	gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
 });
 
 /* --------- default --------- */
 
-gulp.task('default', ['jade', 'sass', 'js', 'fonts', 'images', 'sync', 'watch']);
+gulp.task('default', ['sprite', 'images', 'jade', 'sass', 'js', 'fonts', 'sync', 'watch']);
