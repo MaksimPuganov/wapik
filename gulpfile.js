@@ -112,9 +112,9 @@ gulp.task('sprite', function () {
   var spriteData = gulp.src(paths.sprt.location).pipe(spritesmith({
     imgName: paths.sprt.nameSprite,
     cssName: paths.sprt.nameCSS,
+	imgPath: paths.sprt.destPath+paths.sprt.nameSprite,
 	padding: 60,
-	algorithm: 'left-right',
-	imgPath: paths.sprt.destPath+paths.sprt.nameSprite
+	algorithm: 'left-right'
   }));
   spriteData.img.pipe(gulp.dest(paths.sprt.destSprite));
   spriteData.css.pipe(gulp.dest(paths.sprt.destCSS));
@@ -123,12 +123,19 @@ gulp.task('sprite', function () {
 /* --------- images --------- */
 
 gulp.task('images', function () {
-	gulp.src(paths.img.location)
-		// .pipe(imagemin({
-		// 	progressive: true,
-		// 	svgoPlugins: [{removeViewBox: false}],
-		// 	use: [pngquant({quality: '75-80', speed: 4})]
-		// }))
+	return gulp.src(paths.img.location)
+		.pipe(imagemin({
+			progressive: true,
+			svgoPlugins: [{
+				removeViewBox: false
+			}],
+			use: [
+				pngquant({
+					quality: '75-80',
+					speed: 2
+				})
+			]
+		}))
 		.pipe(gulp.dest(paths.img.dest));
 });
 

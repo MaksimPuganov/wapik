@@ -112,18 +112,32 @@
                 @include sprite($icon-lightbulb);
             }
         }
+
+        .icon_magic-wand {
+
+            &:before{
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -50px;
+                @include sprite($icon-magic-wand);
+            }
+        }
+
+        .icon_cloud {
+
+            &:before{
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -50px;
+                @include sprite($icon-cloud);
+            }
+        }
+
     }
-
-
-
-    .icon_magic-wand {
-        @include sprite($icon-magic-wand);
-    }
-
-    .icon_cloud {
-        @include sprite($icon-cloud);
-    }
-
 
     .descr {
         float: left;
