@@ -175,7 +175,7 @@ footer {
 		height: 1px;
 		background-color: #6fb048;
 		margin-top: 14px;
-		margin-left: 44%;
+		margin-left: 47%;
 	}
 }
 
@@ -187,8 +187,7 @@ footer {
 }
 
 .descr {
-	color: #83a7a5;
+	@extend .descr__block;
 	font-size: 14px;
-	font-weight: 400;
 	line-height: 22px;
 }

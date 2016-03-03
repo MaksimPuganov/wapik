@@ -1,0 +1,57 @@
+// promo template block start
+.promo__template__block {
+    background-color: #eef1ec;
+    margin-bottom: 60px;
+
+    .description__block {
+
+        .image__block {
+            float: left;
+            width: 50%;
+        }
+
+        .description__item {
+            float: right;
+            width: 47%;
+            margin-top: 120px;
+
+            .title__block--temp {
+                color: #0f5f5c;
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            .descr__block {
+                @extend .descr;
+                margin-bottom: 25px;
+            }
+
+            .list__block {
+                @extend .descr;
+                line-height: 38px;
+                position: relative;
+            }
+
+            .list__item {
+                margin-left: 36px;
+
+            }
+
+            .icon_tick {
+                &:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    @include sprite($icon-tick);
+                    margin-left: -40px;
+                    margin-top: 5px;
+                }
+            }
+
+        }
+
+    }
+
+}
+// promo template block end
