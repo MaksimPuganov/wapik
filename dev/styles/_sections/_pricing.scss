@@ -1,0 +1,91 @@
+.pricing__block {
+
+    .card__prices__block {
+        text-align: center;
+        font-size: 0;
+        margin-bottom: 78px;
+
+        .card__prices__item {
+            display: inline-block;
+            width: 255px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #c1d3d2;
+            @include border-radius(3px 0 0 3px);
+
+            .card__price__title {
+                color: #6fb048;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 3rem;
+                text-transform: uppercase;
+            }
+
+            .card__price__val {
+                color: #0f5f5c;
+                font-family: Montserrat;
+                font-size: 65px;
+                font-weight: 400;
+                line-height: 3rem;
+            }
+
+            .card__price__iteration {
+                color: #0f5f5c;
+                @extend .descr;
+                line-height: 20px;
+            }
+
+            .card__price__list {
+                @extend .descr;
+                line-height: 28px;
+            }
+
+            .card__price__btn {
+                background-color: #83a7a5;
+                padding: 12px 22px;
+                @include border-radius(2px);
+                line-height: 6rem;
+
+                &:hover {
+                    background-color: #6fb048;
+                }
+            }
+        }
+    }
+
+    .plans__block {
+
+        .title__block {
+            font-size: 22px;
+        }
+
+        .article__block {
+            margin-bottom: 40px;
+        }
+
+        .plans__list {
+            position: relative;
+            width: 30%;
+            padding-left: 30px;
+
+            .plans__list__item {
+                @extend .descr;
+                line-height: 34px;
+                text-align: left;
+                padding-left: 13px;
+            }
+
+            .icon_tick {
+                &:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    @include sprite($icon-tick);
+                    margin-top: 3px;
+                    left: 12px;
+                }
+            }
+        }
+    }
+
+}

@@ -107,38 +107,6 @@ footer {
 	    }
 }
 
-// @keyframes fade-in {
-//
-// 	// @for $i from 1 through 100 {
-// 	// 	#{$i}% {
-// 	//         opacity: #{$i/100};
-// 	//     }
-// 	// }
-//     0% {
-//         opacity: 0;
-//     }
-//
-// 	10% {
-//         opacity: .1;
-//     }
-//
-// 	30% {
-//         opacity: .3;
-//     }
-//
-// 	60% {
-//         opacity: .6;
-//     }
-//
-// 	90% {
-//         opacity: .9;
-//     }
-//
-//     100% {
-//         opacity: 1;
-//     }
-// }
-
 .maincontent {
 	min-height: calc(100vh - 50px);
 	@include animation('fade-in 1s ease');
@@ -162,10 +130,16 @@ footer {
 	padding: 12px 38px;
 }
 
+
+.article__block {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
 .title__block {
 	color: #0f5f5c;
 	font-size: 32px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 36px;
 
 	&:after {
@@ -177,6 +151,13 @@ footer {
 		margin-top: 14px;
 		margin-left: 47%;
 	}
+}
+
+.title__block--descr {
+	color: #0f5f5c;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 20px;
 }
 
 .descr__block {

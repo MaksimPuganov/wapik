@@ -3,41 +3,43 @@
     .article__block
         h2.title__block Pricing & Plan
         p.descr__block 
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-    .card__prices__block
+            | Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Donec id elit non mi porta gravida at eget metus.
+    ul.card__prices__block 
         - var descrs = ['Basic','Plus','Premium']
         - var prices = [199,399,699]
         - var lists = ['Justo Fringilla','Mollis Sit Nullam','Ultricies Purus Amet','Cras Inceptos']
         - for( var i =0; i < descrs.length; i++)
             - var desc = descrs[i]
-            - var price = prices[i]            
-                .card__prices__item
+            - var price = prices[i]
+                li.card__prices__item
                     h3.card__price__title= desc
                     span.card__price__val $#{price}
                     p.card__price__iteration
                         | /month
-                    ul.card__price__list
+                    .card__price__list
                         each val in lists
-                            li.card__price__item= val
+                            .card__price__item= val
                     a.card__price__btn
                         | Select Plan
     .plans__block
+        .article__block
+            h3.title__block Included with all Plans
         - var descrs = ['Maecenas faucibus mollis interdum','Cras justo odio, dapibus ac facilisis','Fringilla Mattis','Vestibulum id ligula porta felis euismod','Duis mollis, est non commodo luctus','Integer posuere','Nulla vitae elit libero, a pharetra augue','Curabitur blandit tempus porttitor','Nullam quis risus eget urna mollis']
-            ul.plans__list                
+            ul.plans__list.left
                 - for( var i = 0; i < 3; i++)
-                    li.plans__list__item= descrs[i]
-            ul.plans__list                
+                    li.icon_tick.plans__list__item= descrs[i]
+            ul.plans__list.left
                 - for( var i = 3; i < 6; i++)
-                    li.plans__list__item= descrs[i]
-            ul.plans__list                
+                    li.icon_tick.plans__list__item= descrs[i]
+            ul.plans__list.left
                 - for( var i = 6; i < 9; i++)
-                    li.plans__list__item= descrs[i]  
+                    li.icon_tick.plans__list__item= descrs[i]
     .help__block
         .icon
             img(src="http://dummyimage.com/44/555/fff.png&text=icon", alt="icon")
         .article__block
             h2.title__block Need Help?
-            p.descr__block 
+            p.descr__block
                 | Contact our Customer Support that is always ready to help you with any possible questions, problems or information.
         a(claas="help__mail" href="mailto:support@wapik.com") support@wapik.com
 //pricing block end

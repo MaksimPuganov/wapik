@@ -1,0 +1,39 @@
+// reviews block start
+.reviews__block {
+    float: left;
+    margin-bottom: 120px;
+
+    .reviews__item {
+        width: 50%;
+
+        .reviews__descr {
+            color: #83a7a5;
+            font-family: 'Merriweather';
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 40px;
+            margin-top: 25%;
+            margin-bottom: 25px;
+        }
+
+        .reviews__sign {
+            @extend .descr;
+
+            .review__name {
+                color: #6fb048;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .reviews__photo {
+
+        .review__img {
+            width: 400px;
+            height: 400px;
+            @include border-radius(50%);
+            overflow: hidden;
+        }
+    }
+}
+// reviews block end
