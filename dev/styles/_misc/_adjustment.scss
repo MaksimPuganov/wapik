@@ -16,7 +16,7 @@ body {
 	width:100%;
 	height:100% !important;
 	background: #f4f4f4;
- 	overflow-x: hidden;
+ // 	overflow-x: hidden;
 	padding: 0;
 	margin: 0;
 }
@@ -171,4 +171,9 @@ footer {
 	@extend .descr__block;
 	font-size: 14px;
 	line-height: 22px;
+}
+
+.icon {
+	margin: 0 auto;
+	text-align: center;
 }

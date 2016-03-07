@@ -54,6 +54,9 @@
     }
 
     .plans__block {
+        float: left;
+        width: 100%;
+        margin-bottom: 58px;
 
         .title__block {
             font-size: 22px;
@@ -86,6 +89,35 @@
                 }
             }
         }
+    }
+
+    .help__block {
+        float: left;
+        width: 100%;
+
+        .icon__lifebuoy {
+            @include sprite($icon-lifebuoy);
+        }
+
+        .title__block {
+            color: #6fb048;
+            margin-top: 16px;
+        }
+
+        .descr__block {
+            text-align: center;
+            margin: 0 auto;
+            width: 51%;
+            margin-bottom: 38px;
+        }
+
+        .help__mail {
+            color: #0f5f5c;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
     }
 
 }
