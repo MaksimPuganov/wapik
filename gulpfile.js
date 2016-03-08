@@ -2,16 +2,16 @@
 
 var
 	gulp        = require('gulp'),
-	sass		= require('gulp-sass'),
+	sass				= require('gulp-sass'),
 	jade        = require('gulp-jade'),
 	browserSync = require('browser-sync').create(),
 	plumber     = require('gulp-plumber'),
-	uncss 		= require('gulp-uncss'),
-	nano		= require('gulp-cssnano'),
+	uncss 			= require('gulp-uncss'),
+	nano				= require('gulp-cssnano'),
 	sourcemaps  = require('gulp-sourcemaps'),
-	uglify 		= require('gulp-uglifyjs'),
-	imagemin 	= require('gulp-imagemin'),
-	pngquant 	= require('imagemin-pngquant'),
+	uglify 			= require('gulp-uglifyjs'),
+	imagemin 		= require('gulp-imagemin'),
+	pngquant 		= require('imagemin-pngquant'),
 	spritesmith = require('gulp.spritesmith');
 
 /* --------- paths --------- */
@@ -60,7 +60,7 @@ var
 
 		browserSync : {
 			baseDir : './dist/',
-			watchPaths : ['./dist/*.html', './dist/css/*.css', './dist/js/*.js', 'dist/images/**/*.{png,jpg}']
+			watchPaths : ['./dist/*.html', './dist/css/*.css', './dist/js/*.js', './dist/images/**/*.{png,jpg}']
 		}
 	};
 

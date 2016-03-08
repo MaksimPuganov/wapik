@@ -1,7 +1,7 @@
 {
-  "name": "Template",
-  "version": "0.0.1",
-  "description": "Jade SASS Template markups",
+  "name": "WAPIK",
+  "version": "0.0.12",
+  "description": "WAPIK",
   "main": "gulpfile.js",
   "repository": "",
   "scripts": {
