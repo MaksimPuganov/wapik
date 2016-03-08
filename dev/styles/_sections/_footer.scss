@@ -1,1 +1,52 @@
-// footer block
+// footer block start
+.footer {
+    color: #0f5f5c;
+
+    .footer__top {
+        float: left;
+        padding-bottom : 58px;
+        margin-bottom:25px;
+        border-bottom : 1px solid #eef1ec;
+
+        .addr__link, .nav__link {
+            color: #0f5f5c;
+        }
+
+        .footer__top__item {
+            float: left;
+            width: 25%;
+        }
+
+        .address, .phone {
+            font-size: 13px;
+            font-weight: 400;
+            font-family: Roboto;
+            color: #83a7a5;
+
+            .title__address {
+                color: #0f5f5c;
+                font-family: ProximaNova;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 35px;
+                text-transform: uppercase;
+            }
+
+            .descr__address {
+                line-height: 28px;
+
+                .addr__link {
+                    text-transform: lowercase;
+
+                    &.phone{
+                        color: #83a7a5;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+//footer block end

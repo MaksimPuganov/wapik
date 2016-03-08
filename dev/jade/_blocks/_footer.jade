@@ -2,34 +2,39 @@
 footer.footer
     .container
         .footer__top
-            address.address
-                h2.title__address
-                p @:
-                    a.mail(href='mailto:hi@wapik.com') hi@wapik.com
-                p p:
-                    a.phone(href='tel:+62 202 555 0117') +62 202 555 0117
-                p.adds a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
-            nav.footer__nav
-                h3.title__menu Company
-                - var names = ["Home","About Us","Pricing","Contact Us"]
-                ul.footer__nav__list
-                    each val in names
-                        li.footer__nav__item
-                            a.nav__link(href="#!")= val
-            nav.footer__nav
-                h3.title__menu Others
-                - var names = ["Help & Support","Privacy Policy","Terms","Sitemap"]
-                ul.footer__nav__list
-                    each val in names
-                        li.footer__nav__item
-                            a.nav__link(href="#!")= val
-            .subscribe__block
-                h3.title__menu
-                    | Newsletter
-                p.desc
-                    | Subscribe to our newsletter and get all the cool news
-                .input__mail
-                    input(type="email" placeholder="Enter Email")
+            .footer__top__item            
+                .address
+                    h2.title__address wapik
+                    p.descr__address 
+                        span @:
+                        a.addr__link.mail(href='mailto:hi@wapik.com')                        hi@wapik.com
+                    p.descr__address 
+                        a.addr__link.phone(href='tel:+62 202 555 0117') p: +62 202 555 0117
+                    p.descr__address.adds a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+            .footer__top__item
+                nav.footer__nav
+                    h3.title__menu Company
+                    - var names = ["Home","About Us","Pricing","Contact Us"]
+                    ul.footer__nav__list
+                        each val in names
+                            li.footer__nav__item
+                                a.nav__link(href="#!")= val
+            .footer__top__item
+                nav.footer__nav
+                    h3.title__menu Others
+                    - var names = ["Help & Support","Privacy Policy","Terms","Sitemap"]
+                    ul.footer__nav__list
+                        each val in names
+                            li.footer__nav__item
+                                a.nav__link(href="#!")= val
+            .footer__top__item
+                .subscribe__block
+                    h3.title__menu
+                        | Newsletter
+                    p.desc
+                        | Subscribe to our newsletter and get all the cool news
+                    .input__mail
+                        input(type="email" placeholder="Enter Email")
         .footer__down
             .copyright.left All rights reserved. 2015. no copy alowed
             - var socials = ['tw','fb','inst','drb','git']
