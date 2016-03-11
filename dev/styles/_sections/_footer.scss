@@ -3,6 +3,7 @@
     color: #0f5f5c;
 
     .footer__top {
+        width: 100%;
         float: left;
         padding-bottom : 58px;
         margin-bottom:25px;
@@ -12,9 +13,33 @@
             color: #0f5f5c;
         }
 
+        .nav__link, .desc {
+            color: #83a7a5;
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 28px;
+            text-transform: none;
+        }
+
+        .desc {
+            line-height: 18px;
+        }
+
         .footer__top__item {
             float: left;
             width: 25%;
+
+            .title__menu {
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 22px;
+            }
+
+            .footer__nav, .subscribe__block {
+                margin-top: 25px;
+
+            }
         }
 
         .address, .phone {
@@ -42,6 +67,31 @@
                         color: #83a7a5;
                     }
                 }
+
+                &.adds {
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .input__mail {
+            width: 100%;
+            background-color: #eef1ec;
+            @include border-radius(3px);
+            border: none;
+            color: #83a7a5;
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            padding:12px;
+
+            @include placeholder {
+                color: red;
+            }
+
+            &:-webkit-input-placeholder {
+                color: red;
             }
         }
     }
