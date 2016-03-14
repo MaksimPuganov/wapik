@@ -1,9 +1,12 @@
 //- navbar block start
 nav.nav__head.right
     - var names = ["Home","About Us","Pricing","Contact Us"]
+    - var links = ["index.html","about.html","pricing.html","contact.html"]
     ul.nav__head__list
-        each val in names
-            li.nav__head__item
-                a.nav__head__link(href="!#")= val
+        - for( var i = 0; i < names.length; i++ )
+            - var val = names[i]
+            - var lnk = links[i]
+                li.nav__head__item
+                    a.nav__head__link(href="#{lnk}")= val
     a.start__button(href="!#") Get Started
 //- navbar block end

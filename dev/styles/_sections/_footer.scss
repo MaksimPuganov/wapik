@@ -74,6 +74,10 @@
             }
         }
 
+        .input__block {
+          position: relative;
+        }
+
         .input__mail {
             width: 100%;
             background-color: #eef1ec;
@@ -87,15 +91,71 @@
             padding:12px;
 
             @include placeholder {
-                color: red;
+                color: #83a7a5;
             }
 
             &:-webkit-input-placeholder {
-                color: red;
+                color: #83a7a5;
             }
+
         }
+        .icon__plane {
+          position: absolute;
+          right: -10px;
+          top: 12px;
+          @include sprite($icon-paper-plane);
+          border: none;
+          background-color: #eef1ec;
+        }
+
     }
 
+    .footer__down {
+
+      .socials__item {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .social__link {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-indent: -9999px;
+    }
+    .socials__icon_tw {
+      @include sprite($icon-tw);
+    }
+
+    .socials__icon_fb {
+      @include sprite($icon-fb);
+    }
+
+    .socials__icon_inst {
+      @include sprite($icon-inst);
+    }
+
+    .socials__icon_drib {
+      @include sprite($icon-drib);
+    }
+
+    .socials__icon_github {
+      @include sprite($icon-github);
+    }
+
+  .copyright {
+    color: #83a7a5;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
 
 

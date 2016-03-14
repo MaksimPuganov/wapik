@@ -35,13 +35,14 @@ footer.footer
                         | Subscribe to our newsletter and get all the cool news
                     .input__block
                         input(class="input__mail" type="email" placeholder="Enter Email")
+                        a.icon__plane(href="!#")
         .footer__down
             .copyright.left All rights reserved. 2015. no copy alowed
             - var socials = ['tw','fb','inst','drib','github']
             ul.socials.right
                 each icon in socials
                     li.socials__item
-                        a(href="#").socials__link= icon
-                            div(class="socials__icon socials__icon_" + icon)
+                        a(href="#" class="socials__link")
+                            div(class="socials__icon_" + icon)
                 
 //footer block end

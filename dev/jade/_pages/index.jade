@@ -1,10 +1,14 @@
 extends ../main
 block title
     | Wapik
-block content1
-    include ../_blocks/_features
-    
-block content2    
-    include ../_blocks/_reviews
-block content3 
-    include ../_blocks/_pricing
+block content
+    include ../_blocks/_maintextblock
+    .container
+        include ../_blocks/_features
+    include ../_blocks/_promotemp
+    .container
+        include ../_blocks/_reviews
+    include ../_blocks/_promomap
+    .container
+        include ../_blocks/_pricing
+    include ../_blocks/_download
