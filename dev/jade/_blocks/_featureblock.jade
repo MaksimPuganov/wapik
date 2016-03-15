@@ -1,0 +1,24 @@
+extends _features
+
+block cardblock
+    .article__block
+        h2.title__block Best of out features
+        p.descr__block Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        p.descr__block Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+    include _cardblock
+    
+    .divider__block
+        .divider__vertical
+        .divider__gorizont
+    .capability__block
+        .card__block_g
+            - var titles = ['Cross Browser Compatibility', 'Creative Idea', 'Pixel Perfect', 'Free Forever and Ever']
+            - var icons = ['planet', 'lightbulb', 'magic-wand', 'cloud']
+            - var descs = ['Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.', 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.']
+            - for( var i = 0; i < titles.length; i++ )
+                - var val = titles[i]
+                - var icon = icons[i]
+                - var desc = descs[i]
+                    .card__item__g
+                        h3(class="title__item icon_#{icon}")= val
+                        p.descr= desc

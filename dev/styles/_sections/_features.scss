@@ -20,8 +20,6 @@
 
         .icon_atom {
             @include sprite($icon-atom);
-            // padding-bottom: 4px;
-            // margin-bottom: 2px;
             margin-top: 4px;
         }
 
@@ -31,9 +29,7 @@
 
         .icon_layers {
             @include sprite($icon-layers);
-            // // padding-bottom: 8px;
-            // margin-top: 6px;
-            // margin-bottom: 8px;
+            margin-top: 8px;
         }
     }
 

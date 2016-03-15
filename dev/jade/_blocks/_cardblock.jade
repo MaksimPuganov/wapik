@@ -1,0 +1,15 @@
+//- card block Start
+block cardblock
+    .card__block
+        - var titles = ['Ionicons', 'Creative Design', 'Photoshop and Sketch']
+        - var icons = ['atom', 'flask', 'layers']
+        - var descs = ['Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem.', 'Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna.']
+        - for( var i = 0; i < titles.length; i++ )
+            - var val = titles[i]
+            - var icon = icons[i]
+            - var desc = descs[i]
+                .card__item_v
+                    div(class='icon icon_#{icon}')
+                    h3.title__item= val
+                    p.descr= desc
+//- card block end

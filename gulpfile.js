@@ -30,7 +30,7 @@ var
 		},
 
 		uncss : {
-			html	:['dist/index.html']
+			html	:['dist/index.html','dist/about.html']
 		},
 
 		js : {

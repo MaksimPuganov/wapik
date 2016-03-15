@@ -1,0 +1,24 @@
+.text__block-about {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+
+
+    .title__head {
+        font-family: Roboto;
+        font-size: 50px;
+        font-weight: 300;
+        line-height: 60px;
+
+    }
+
+}
+
+.descr__block {
+
+    &.descr__block-about {
+        margin: 0 auto;
+        width: 67%;
+    }
+
+}
