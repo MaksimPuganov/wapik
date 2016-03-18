@@ -5,6 +5,11 @@
     height: 200px;
     margin-bottom: 100px;
 
+    &.about {
+        background: url(../img/download-about.png) no-repeat;
+        background-size: cover;
+    }
+
     .description__block {
         margin-top: 70px;
     }
@@ -16,5 +21,13 @@
     .title__block--descr {
         line-height: 34px;
         margin: 0;
+
+        &.about {
+            color: white;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 22px;
+        }
     }
+
 }

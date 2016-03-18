@@ -1,26 +1,28 @@
 // pricing block start
+mixin pricing-cards(cardprices, lists)
+    ul.card__prices__block
+       each item in cardprices
+             li.card__prices__item
+                 h3.card__price__title= item.name
+                 span.card__price__val $#{item.price}
+                 p.card__price__iteration
+                     | /month
+                 .card__price__list
+                     each val in lists
+                         .card__price__item= val
+                 a.card__price__btn
+                     | Select Plan
 .pricing__block
     .article__block
         h2.title__block Pricing & Plan
         p.descr__block 
             | Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Donec id elit non mi porta gravida at eget metus.
-    ul.card__prices__block 
-        - var descrs = ['Basic','Plus','Premium']
-        - var prices = [199,399,699]
-        - var lists = ['Justo Fringilla','Mollis Sit Nullam','Ultricies Purus Amet','Cras Inceptos']
-        - for( var i =0; i < descrs.length; i++)
-            - var desc = descrs[i]
-            - var price = prices[i]
-                li.card__prices__item
-                    h3.card__price__title= desc
-                    span.card__price__val $#{price}
-                    p.card__price__iteration
-                        | /month
-                    .card__price__list
-                        each val in lists
-                            .card__price__item= val
-                    a.card__price__btn
-                        | Select Plan
+            
+    - var lists = ['Justo Fringilla','Mollis Sit Nullam','Ultricies Purus Amet','Cras Inceptos']
+    - var cardprices = [{name : 'Basic', price : '199'}, {name : 'Plus', price : '399'}, {name : 'Premium', price : '699'}]
+    
+    +pricing-cards(cardprices, lists)
+    
     .plans__block
         .article__block
             h3.title__block Included with all Plans

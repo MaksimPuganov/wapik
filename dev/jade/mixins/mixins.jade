@@ -1,0 +1,14 @@
+//- mixins
+mixin pricing-cards(cardprices, lists)
+    ul.card__prices__block
+       each item in cardprices
+             li.card__prices__item
+                 h3.card__price__title= item.name
+                 span.card__price__val $#{item.price}
+                 p.card__price__iteration
+                     | /month
+                 .card__price__list
+                     each val in lists
+                         .card__price__item= val
+                 a.card__price__btn
+                     | Select Plan

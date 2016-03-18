@@ -1,0 +1,18 @@
+//- mixins
+mixin pricing-cards (descrs, prices, lists)
+     ul.card__prices__block 
+//- -         - var descrs = ['Basic','Plus','Premium']
+//- -         - var prices = [199,399,699]
+//- -         - var lists = ['Justo Fringilla','Mollis Sit Nullam','Ultricies Purus Amet','Cras Inceptos']
+         - for( var i =0; i < descrs.length; i++)
+             - var desc = descrs[i]
+             - var price = prices[i]
+                 li.card__prices__item
+                     h3.card__price__title= desc
+                     span.card__price__val $#{price}
+                     p.card__price__iteration
+                         | /month
+                     .card__price__list
+                         each val in lists
+                             .card__price__item= val
+                     a.card__price__btn

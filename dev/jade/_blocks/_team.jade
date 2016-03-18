@@ -1,0 +1,15 @@
+//- team block start
+.team__block
+    .container
+        .article__block
+            h2.title__block Meet Our Team
+            p.descr__block
+                | Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        - var workers = [{name : 'Joyce Hudson', position :'Founder & Designer', photo : 'founder.png'},{name : 'Angela Campbell', position :'Project Manager', photo : 'projectman.png'},{name : 'James Walker', position :'Developer', photo : 'developer.png'}]
+        each worker in workers
+            .team__item
+                .image__block
+                    img.team__photo(src="../img/#{worker.photo}", alt="#{worker.position}")
+                .team__name= worker.name
+                .team__pos= worker.position
+//- team block end

@@ -1,7 +1,12 @@
 //- about page
 extends ../main
 block title
-    | Wapik
+    | Wapik. About US
+
 block content
+    include ../mixins/mixins
     include ../_blocks/_maintextaboutblock
-    include ../_blocks/_aboutusblock
+    .about__block
+        include ../_blocks/_aboutusblock
+    include ../_blocks/_team
+    include ../_blocks/_downloadblockabout

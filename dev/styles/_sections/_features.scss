@@ -1,13 +1,11 @@
 // @import "../_misc/sprite";
 .features__block {
     width: 100%;
-    float: left;
     margin-bottom: 120px;
 }
 
 .card__block {
     width: 100%;
-    float: left;
     .card__item_v {
         width: calc(100%/3);
         float: left;

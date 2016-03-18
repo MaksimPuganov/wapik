@@ -1,3 +1,11 @@
+@import "team";
+
+.about__block {
+    .features__block {
+        margin-bottom: 60px;
+    }
+}
+
 .text__block-about {
     text-align: center;
     margin: 0 auto;
@@ -21,4 +29,14 @@
         width: 67%;
     }
 
+}
+
+.download__block.about {
+
+    .title__block--descr, .descr__block {
+        color: white;
+    }
+    .btn {
+        background-color: #49732f;
+    }
 }
