@@ -2,3 +2,9 @@ extends ../main
 block title
     | Wapik. Pricing
 block content
+    include ../_blocks/_headblockpricing
+    .container
+        include ../_blocks/_plansblock
+        include ../_blocks/_helpsblock
+            .help__mail
+                a(class="help__mail__link--pricing" href="mailto:support@wapik.com") support@wapik.com

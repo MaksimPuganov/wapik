@@ -1,0 +1,15 @@
+//- pland block start
+.plans__block
+    .article__block
+        h3.title__block Included with all Plans
+    - var descrs = ['Maecenas faucibus mollis interdum','Cras justo odio, dapibus ac facilisis','Fringilla Mattis','Vestibulum id ligula porta felis euismod','Duis mollis, est non commodo luctus','Integer posuere','Nulla vitae elit libero, a pharetra augue','Curabitur blandit tempus porttitor','Nullam quis risus eget urna mollis']
+        ul.plans__list.left
+            - for( var i = 0; i < 3; i++)
+                li.icon_tick.plans__list__item= descrs[i]
+        ul.plans__list.left
+            - for( var i = 3; i < 6; i++)
+                li.icon_tick.plans__list__item= descrs[i]
+        ul.plans__list.left
+            - for( var i = 6; i < 9; i++)
+                li.icon_tick.plans__list__item= descrs[i]
+//- plans block end

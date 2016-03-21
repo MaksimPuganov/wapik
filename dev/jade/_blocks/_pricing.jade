@@ -23,25 +23,11 @@ mixin pricing-cards(cardprices, lists)
     
     +pricing-cards(cardprices, lists)
     
-    .plans__block
-        .article__block
-            h3.title__block Included with all Plans
-        - var descrs = ['Maecenas faucibus mollis interdum','Cras justo odio, dapibus ac facilisis','Fringilla Mattis','Vestibulum id ligula porta felis euismod','Duis mollis, est non commodo luctus','Integer posuere','Nulla vitae elit libero, a pharetra augue','Curabitur blandit tempus porttitor','Nullam quis risus eget urna mollis']
-            ul.plans__list.left
-                - for( var i = 0; i < 3; i++)
-                    li.icon_tick.plans__list__item= descrs[i]
-            ul.plans__list.left
-                - for( var i = 3; i < 6; i++)
-                    li.icon_tick.plans__list__item= descrs[i]
-            ul.plans__list.left
-                - for( var i = 6; i < 9; i++)
-                    li.icon_tick.plans__list__item= descrs[i]
-    .help__block
-        .icon.icon__lifebuoy
-            //- img(src="http://dummyimage.com/44/555/fff.png&text=icon", alt="icon")
-        .article__block
-            h2.title__block Need Help?
-            p.descr__block
-                | Contact our Customer Support that is always ready to help you with any possible questions, problems or information.
-            a(class="help__mail" href="mailto:support@wapik.com") support@wapik.com
+    include _plansblock
+    
+    include _helpsblock
+        .help__mail
+            a(class="help__mail__link" href="mailto:support@wapik.com") support@wapik.com
+        
+    
 //pricing block end

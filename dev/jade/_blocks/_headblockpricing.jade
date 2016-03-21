@@ -1,0 +1,31 @@
+//- head block start
+.head__block.pricing
+    .container
+        include _header
+        
+        .pricing__block
+            .article__block
+                h2.title__block--descr
+                    | Get Started with Wapik Today
+                h2.title__block--descr
+                    | All Plans include a 30-Day Trial Period
+                p.descr__block 
+                    | Cras mattis consectetur purus sit amet fermentum.
+                    
+            - var lists = ['Justo Fringilla','Mollis Sit Nullam','Ultricies Purus Amet','Cras Inceptos']
+            - var cardprices = [{name : 'Basic', price : '199'}, {name : 'Plus', price : '399'}, {name : 'Premium', price : '699'}]
+                ul.card__prices__block--pricing
+                   each item in cardprices
+                         li.card__prices__item
+                             h3.card__price__title= item.name
+                             span.card__price__val $#{item.price}
+                             p.card__price__iteration
+                                 | /month
+                             .card__price__list
+                                 each val in lists
+                                     .card__price__item= val
+                             a.card__price__btn
+                                 | Select Plan
+
+            p.descr__block--pricing Limited Time Offer. All plans are FREE 14 days!
+//- head block end
