@@ -1,0 +1,26 @@
+//- contact form block start
+.contact__form__block
+    .container
+        .contact__form--wrap.left.clearfix
+            form.contact__form#contact(metod="post")
+                label.contact__form__label.left
+                    input.contact__form__text(type="text" placeholder="Name")
+                label.contact__form__label.left
+                    input.contact__form__text(type="email" placeholder="Email")
+                label.contact__form__label.left
+                    input.contact__form__text(type="text" placeholder="Phone")
+                label.contact__form__label.left
+                    textarea.contact__form__textarea(type="text" placeholder="Message")
+                label.contact__form__label.left
+                    button.contact__form__btn.btn(type="submit") Send Message
+        .address__block.right.clearfix
+            .address__block--descr
+                .title__addr
+                    | Headquarter
+                .address.icon-addr.icon__map-point
+                    | 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+                a.phone.icon-addr.icon__phone-addr(href="tel:+622025550117")
+                    | +62 202 555 0117
+                a.email.icon-addr.icon__email-addr(href="mailto:hi@wapik.com")
+                    | hi@wapik.com
+//- contact form block end

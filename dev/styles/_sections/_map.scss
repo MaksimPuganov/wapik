@@ -1,0 +1,10 @@
+.map {
+    overflow:hidden;
+    height:400px;
+    width:100%;
+
+    #gmap_canvas {
+        max-width:none!important;
+        background:none!important;
+    }
+}

@@ -1,0 +1,138 @@
+@import "map";
+
+.head__block.contact {
+    @extend .head__block.pricing;
+    background-color: white !important;
+
+    .header {
+        border: none;
+
+    }
+}
+
+.contact__form__block {
+    padding-bottom: 80px;
+    
+    .contact__form--wrap {
+        width: 50%;
+
+        .contact__form__label {
+            width: 100%;
+            margin-bottom: 26px;
+        }
+
+        .contact__form__btn {
+            border: 0;
+            color: white;
+            font-family: Montserrat;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 22px;
+            text-transform: uppercase;
+            @include border-radius(3px);
+        }
+
+        .contact__form__text {
+            border: 1px solid #c1d3d2;
+            @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
+            line-height: 22px;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            color: #83a7a5;
+            width: 100%;
+            padding: 17px 20px;
+            @include placecolor(#83a7a5);
+            // line-height: 21px;
+        }
+
+        .contact__form__textarea {
+            @extend .contact__form__text;
+            height: 124px;
+            overflow: auto;
+            resize: none;
+        }
+    }
+}
+
+.address__block {
+    border: 2px dashed #c1d3d2;
+    width: 40%;
+
+    .address__block--descr {
+        padding: 40px;
+    }
+
+    .title__addr {
+        color: #0f5f5c;
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 21px;
+        text-transform: uppercase;
+        margin-bottom: 27px;
+    }
+
+    .address, .phone {
+        color: #83a7a5;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        padding-left: 20px;
+    }
+
+    .address {
+        width: 145px;
+        margin-bottom: 28px;
+    }
+
+    .phone {
+        margin-bottom: 16px;
+        text-transform:lowercase;
+    }
+
+    .email {
+        width: 100%;
+        color: #0f5f5c;
+        @extend .address;
+        font-weight: 500;
+        text-transform:lowercase;
+    }
+
+    .icon-addr {
+        position: relative;
+        display: block;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+    }
+
+
+}
+.icon__map-point {
+    &:before {
+        @include sprite($icon-map-point);
+        top: 0;
+        left: 0;
+    }
+}
+
+.icon__phone-addr {
+    &:before {
+        @include sprite($icon-phone-addr);
+        top: 3px;
+        left: 0;
+    }
+}
+
+.icon__email-addr {
+    &:before {
+        @include sprite($icon-email-addr);
+        top:5px;
+        left: 0;
+    }
+}

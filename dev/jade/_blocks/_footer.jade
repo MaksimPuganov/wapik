@@ -23,10 +23,13 @@ footer.footer
                 nav.footer__nav
                     h3.title__menu Others
                     - var names = ["Help & Support","Privacy Policy","Terms","Sitemap"]
+                    - var links = ["index.html","about.html","pricing.html","contact.html"]
                     ul.footer__nav__list
-                        each val in names
-                            li.footer__nav__item
-                                a.nav__link(href="#!")= val
+                        - for( var i = 0; i < names.length; i++ )
+                            - var val = names[i]
+                            - var lnk = links[i]
+                                li.footer__nav__item
+                                    a.nav__link(href="#{lnk}")= val
             .footer__top__item
                 .subscribe__block
                     h3.title__menu

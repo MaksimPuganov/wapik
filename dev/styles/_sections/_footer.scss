@@ -53,8 +53,9 @@
                 font-family: ProximaNova;
                 font-size: 22px;
                 font-weight: 700;
-                line-height: 35px;
+                line-height: 24px;
                 text-transform: uppercase;
+                margin-bottom: 0;
             }
 
             .descr__address {
@@ -70,6 +71,7 @@
 
                 &.adds {
                     line-height: 20px;
+                    width: 80%;
                 }
             }
         }
