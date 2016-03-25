@@ -6,15 +6,19 @@
 
     .image__block {
         margin: 60px 0 60px 0;
+
+        .image {
+            margin-right: 153px;
+        }
     }
 
     .description__block {
 
         .description__item {
-            width: 60%;
+            width: 51%;
             margin-top: 145px;
 
-            .descr__block {
+            .descr__block, .title__block--descr {
                 text-align: left;
             }
         }
