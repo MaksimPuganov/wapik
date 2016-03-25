@@ -3,16 +3,23 @@
 .head__block.contact {
     @extend .head__block.pricing;
     background-color: white !important;
+    margin-bottom: 0;
 
     .header {
         border: none;
-
+        margin-bottom: 0 !important;
     }
 }
 
 .contact__form__block {
     padding-bottom: 80px;
-    
+
+    .article__block {
+        width: 42%;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+
     .contact__form--wrap {
         width: 50%;
 
